@@ -1,0 +1,29 @@
+{
+  "name": "keeper-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "axios": "^1.2.3",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "hyper-react-app": "^0.0.8",
+    "mongoose": "^6.8.4",
+    "node": "^19.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "usestate": "^1.1.3"
+  }
+}

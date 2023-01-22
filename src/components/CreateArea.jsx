@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import AddIcon from '@mui/icons-material/Add';
-import Fab from '@mui/material/Fab';
+// import AddIcon from '@mui/icons-material/Add';
+// import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
-import Axios from 'axios';
+// import Axios from 'axios';
 // import { Keyframe } from 'react-native-reanimated';
   
 function CreateArea(props) {
   
   useEffect(() => {
-    fetch("http://localhost:3000/", { crossdomain: true })
+    fetch("http://localhost:5000/")
   }, []);
 
   const [inputContent, setInputText] = useState({
@@ -40,37 +40,29 @@ function CreateArea(props) {
 
   function handleClick() {
     props.contentFunc(inputContent);
-    setInputText({
-      title: "",
-      content: ""
-    });
+    // setInputText({
+    //   title: "",
+    //   content: ""
+    // });
   }
 
   function handleAreaClick(){
-    // var row = 1;
 
     setExpanded(true);
 
-    
-    // return row = 1;
   }
-  
-  // console.log(expanded);
-  //   const row3 = 3;
-  //   const row1 = 1;
-  
 
-  // var noRows = handleAreaClick;
-
-  // const url = "http://localhost:3001/";
+  const test = "";
 
   function handleFormSubmit(e) {
     
     e.preventDefault();
-
+    
     const {title, content} = inputContent;
-
-    const res = fetch("/", {
+    // console.log(title);
+    // test = title;
+    
+    fetch("/", {
       method: "POST",
       headers: {
         "Content-Type" : "application/json"
@@ -79,30 +71,14 @@ function CreateArea(props) {
         title: title,
         content: content
       })
-    })
-
-    // Axios.post(url, {
-    //   title: inputContent.title,
-    //   body: inputContent.content
-    // })
-
-    // .then(res => {
-    //   console.log(res.inputContent);
-    // })
-    
-    // fetch('http://localhost:3000/', {
-    //   method: 'POST',
-    //   // We convert the React state to JSON and send it as the POST body
-    //   body: JSON.stringify(this.name)
-    // }).then(function(response) {
-    //   // console.log(response)
-    //   return response.json();
-    // });
+    });
     
   }
 
   return (
     <div>
+
+    <h1>{test}</h1>
 
     {/* <h1 
     // datatype={!expanded}
